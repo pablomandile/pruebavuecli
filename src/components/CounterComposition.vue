@@ -7,7 +7,9 @@
     
 </template>
 
-<script lang="ts">
+<!-- ************ Script sin usar Setup -->
+
+<!-- <script lang="ts">
     import { defineComponent, ref } from 'vue'
 
     export default defineComponent ({
@@ -21,6 +23,19 @@
             return { counter, addCounter }
         }
     })
+
+</script> -->
+
+<!-- ************ Script usando Setup ahorramos código -->
+
+<script lang="ts" setup>
+    import { ref, Ref } from 'vue'
+
+    let counter:Ref = ref(0)    // Ref se usa para tipar
+    const addCounter = () => {
+        counter.value++
+    }
+
 
 </script>
 
